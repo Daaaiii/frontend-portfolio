@@ -1,7 +1,142 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+:root {
+  --cor-primaria: #0ec0c1;
+  --cor-secundaria: #6c043c;
+  --cor-clara: #fef7d5;
+  --cor-fundo-preto: #040203;
+  --cor-fundo-escura: #210123;
+  --cor-fundo: #910142;
+
+
+}
+
+:root {
+  --fonte-primaria: 'Poppins', sans serif;
+  --fonte-secundaria: 'Raleway', sans serif;
+  --fonte-gigante: 4.5rem;
+  --fonte-extra-grande: 3rem;
+  --fonte-grande: 2.4rem;
+  --fonte-normal: 1.6rem;
+}
+
+:root {
+  --mobile-padding: 30px;
+}
+
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: var(--cor-clara);
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+html {
+  font-size: 62.5%;
+  color: var(--cor-clara);
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo-escura);
+  font-family: var(--fonte-primaria);
+  font-size: var(--fonte-normal);
+}
+
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.alinhar-itens-no-centro {
+  align-items: center;
+}
+
+.redes-sociais a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--cor-clara);
+  margin: 0 4px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.redes-sociais a i {
+  line-height: 40px;
+}
+
+.redes-sociais a:hover {
+  color: var(--cor-primaria);
+}
+
+.outer-shadow {
+  box-shadow: 3px 3px #6c043c, -3px -3px 3px #6c043c;
+}
+
+.inner-shadow {
+  box-shadow: inset 3px 3px 3px #6c043c, inset -3px -3px 3px #6c043c;
+}
+
+.section {
+  padding: 7rem 0 7rem;
+}
+
+.section-title {
+  text-align: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 60px 0;
+}
+
+.section-title h2 {
+  font-size: var(--fonte-gigante);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section-title h2::selection {
+  background-color: var(--cor-fundo);
+}
+
+.botao {
+  font-size: var(--fonte-grande);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  background-color: var(--cor-secundaria);
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
 }
