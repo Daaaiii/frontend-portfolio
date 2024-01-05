@@ -1,1 +1,24 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="row justify-content-between alinhar-itens-no-centro">
+      <a href="#">
+        <h1 class="logo">DB</h1>
+      </a>
+      <nav>
+        <input id="menu-hamburguer" type="checkbox" />
+
+        <label for="menu-hamburguer">
+          <div class="menu">
+            <span class="hamburguer"></span>
+          </div>
+        </label>
+        <ul>
+          <li><a routerLink="home">Sobre Mim</a></li>
+          <li><a routerLink="habilities" routerLinkActive="active">Habilidades</a></li>
+          <li><a routerLink="projects">Meus projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>
