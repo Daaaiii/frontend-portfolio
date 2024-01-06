@@ -4,25 +4,31 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HabilitiesComponent } from './components/habilities/habilities.component';
 import { AboutComponent } from './components/about/about.component';
 
-
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    component:HomeComponent,
-
+    component: HomeComponent,
   },
   {
     path: 'projects',
-    component: ProjectsComponent,
+    loadComponent: () =>
+      import('./components/projects/projects.component').then(
+        (m) => m.ProjectsComponent
+      ),
   },
   {
     path: 'habilities',
-   component: HabilitiesComponent
+    loadComponent: () =>
+      import('./components/habilities/habilities.component').then(
+        (m) => m.HabilitiesComponent
+      ),
   },
   {
     path: 'about',
-   component: AboutComponent
+    loadComponent: () =>
+      import('./components/about/about.component').then(
+        (m) => m.AboutComponent
+      ),
   },
-
 ];
