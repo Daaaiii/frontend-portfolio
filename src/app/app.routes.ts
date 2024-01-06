@@ -31,4 +31,11 @@ export const routes: Routes = [
         (m) => m.AboutComponent
       ),
   },
+  {
+    path: 'stats',
+    loadComponent: () =>
+      import('./components/stats/stats.component').then(
+        (m) => m.StatsComponent
+      ),
+  },
 ];
