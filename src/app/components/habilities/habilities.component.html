@@ -2,90 +2,59 @@
   <div class="container">
     <div class="row">
       <div class="section-title">
-        <h2>Habilidades</h2>
+        <h2>Habilidades Backend</h2>
       </div>
     </div>
 
     <div class="container-habilidades">
-      <div class="informacoes javascript">
+      <div *ngFor="let hab of habilidadesBackend" class="informacoes {{ hab.id }}">
         <div class="logo">
-          <i class="devicon devicon-javascript-plain" id="javascript"></i>
+          <i class="{{ hab.icone }}" id="{{ hab.id }}"></i>
         </div>
-        <h3>JavaScript</h3>
-
+        <h3>{{ hab.nome }}</h3>
       </div>
+    </div>
+    <div class="row">
+      <div class="section-title">
+        <h2>Habilidades Frontend</h2>
+      </div>
+    </div>
 
-      <div class="informacoes html">
+    <div class="container-habilidades">
+      <div *ngFor="let hab of habilidadesFrontend" class="informacoes {{ hab.id }}">
         <div class="logo">
-          <i class="devicon devicon-html5-plain-wordmark" id="html"></i>
+          <i class="{{ hab.icone }}" id="{{ hab.id }}"></i>
         </div>
-        <h3>HTML5</h3>
-
+        <h3>{{ hab.nome }}</h3>
       </div>
+    </div>
+    <div class="row">
+      <div class="section-title">
+        <h2>Outras Habilidades</h2>
+      </div>
+    </div>
 
-      <div class="informacoes css">
+    <div class="container-habilidades">
+      <div *ngFor="let hab of outrasHabilidades" class="informacoes {{ hab.id }}">
         <div class="logo">
-          <i class="devicon devicon-css3-plain-wordmark" id="css"></i>
+          <i class="{{ hab.icone }}" id="{{ hab.id }}"></i>
         </div>
-        <h3>CSS3</h3>
-
+        <h3>{{ hab.nome }}</h3>
       </div>
+    </div>
+    <div class="row">
+      <div class="section-title">
+        <h2>Database</h2>
+      </div>
+    </div>
 
-      <div class="informacoes github">
+    <div class="container-habilidades">
+      <div *ngFor="let hab of db" class="informacoes {{ hab.id }}">
         <div class="logo">
-          <i class="devicon devicon-github-original" id="github"></i>
+          <i class="{{ hab.icone }}" id="{{ hab.id }}"></i>
         </div>
-        <h3>GitHub</h3>
-
+        <h3>{{ hab.nome }}</h3>
       </div>
-
-      <div class="informacoes git">
-        <div class="logo">
-          <i class="devicon devicon-git-plain" id="git"></i>
-        </div>
-        <h3>Git</h3>
-      </div>
-
-      <div class="informacoes react">
-        <div class="logo">
-          <i class="devicon-react-original" id="react"></i>
-        </div>
-        <h3>React</h3>
-      </div>
-      <div class="informacoes nodejs">
-        <div class="logo">
-          <i class="devicon-nodejs-plain" id="nodejs"></i>
-        </div>
-        <h3>Node.js</h3>
-      </div>
-      <div class="informacoes typescript">
-        <div class="logo">
-          <i class="devicon-typescript-plain" id="typescript"></i>
-        </div>
-        <h3>Typescript</h3>
-      </div>
-      <div class="informacoes jest">
-        <div class="logo">
-          <i class="devicon-jest-plain" id="jest"></i>
-        </div>
-        <h3>Jest</h3>
-      </div>
-      <div class="informacoes python">
-        <div class="logo">
-          <i class="devicon-python-plain" id="python"></i>
-        </div>
-        <h3>Python</h3>
-      </div>
-      <div class="informacoes redux">
-        <div class="logo">
-          <i class="devicon-redux-original" id="redux"></i>
-        </div>
-        <h3>Redux</h3>
-      </div>
-
-
-
-
     </div>
   </div>
 </section>
