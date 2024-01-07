@@ -5,66 +5,34 @@
         <h2>Meus projetos</h2>
       </div>
     </div>
-      <div class="projeto">
-        <a href="https://github.com/Daaaiii/Pokedex" target="_blank">
-          <img src="./src/imagens/pokedex.png" alt="Pokedéx" />
-          <h3>Pokedéx</h3>
+    <div class="container-projetos">
+      <div *ngFor="let projeto of projetos" class="projeto">
+          <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+          <h3>{{ projeto.nome }}</h3>
           <div class="informacoes-projeto">
-            <p>Projeto feito usando HTML, CSS e JavaScript</p>
-            <p>🔗 <a href="https://daaaiii.github.io/Pokedex/" target="_blank"> GitHub Pages</a></p>
+            <p>{{ projeto.descricao }}</p>
+            <p>{{ projeto.topics }}</p>
+            <p>🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
+            <p>🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
           </div>
-        </a>
       </div>
-
-      <div class="projeto">
-        <a href="https://github.com/Daaaiii/gerador-de-conselhos" target="_blank">
-          <img src="./src/imagens/gerador-conselhos.png" alt="Gerador de gerador-de-conselhos" />
-          <h3>Gerador de Conselhos</h3>
-          <div class="informacoes-projeto">
-            <p>Projeto feito com HTML, CSS e Javascript utilizando api</p>
-            <p>🔗 <a href="https://daaaiii.github.io/gerador-de-conselhos/" target="_blank">GitHub Pages</a></p>
-          </div>
-        </a>
-      </div>
-
-      <div class="projeto">
-        <a href="https://github.com/Daaaiii/projeto-fetch-github-api" target="_blank">
-          <img src="./src/imagens/api-github.png" alt="projeto GitHub" />
-          <h3>API Github</h3>
-          <div class="informacoes-projeto">
-            <p>Projeto feito com HTML, CSS e Javascript utilizando api</p>
-            <p>🔗 <a href="https://daaaiii.github.io/projeto-fetch-github-api/" target="_blank">GitHub Pages</a></p>
-          </div>
-        </a>
-      </div>
-
-      <div class="container-projetos">
-        <div class="projeto">
-          <a href="https://github.com/Daaaiii/landing-page-xpto" target="_blank">
-            <img  src="./src/imagens/xpto.png" alt="Landing page XPTO" />
-            <h3>Landing Page</h3>
-            <div class="informacoes-projeto">
-              <p>Projeto feito usando HTML, CSS e JavaScript</p>
-              <p>🔗 <a href="https://daaaiii.github.io/landing-page-xpto/" target="_blank">GitHub Pages</a></p>
-            </div>
-          </a>
-        </div>
     </div>
     <div class="row">
       <div class="section-title">
-        <h2>Projetos que estou trabalhando</h2>
+        <h2>Projetos mais recentes</h2>
       </div>
     </div>
-      <div class="projeto">
-        <!--* adicionar um fetch para meus projetos mais recentes no Github -->
-        <!-- <a href="https://github.com/Daaaiii/Pokedex" target="_blank">
-          <img src="./src/imagens/pokedex.png" alt="Pokedéx" />
-          <h3>Pokedéx</h3>
+    <div class="container-projetos">
+      <div *ngFor="let projeto of projetosRecentes" class="projeto">
+          <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+          <h3>{{ projeto.nome }}</h3>
           <div class="informacoes-projeto">
-            <p>Projeto feito usando HTML, CSS e JavaScript</p>
-            <p>🔗 <a href="https://daaaiii.github.io/Pokedex/" target="_blank"> GitHub Pages</a></p>
+            <p *ngIf="projeto.descricao">{{ projeto.descricao }}</p>
+            <p *ngIf="projeto.topics">{{ projeto.topics }}</p>
+            <p *ngIf="projeto.urlProjeto">🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
+            <p *ngIf="projeto.urlCodigo">🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
           </div>
-        </a> -->
       </div>
+    </div>
   </div>
 </section>
