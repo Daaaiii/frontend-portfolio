@@ -1,5 +1,7 @@
 # Portfolio
 
+[![wakatime](https://wakatime.com/badge/user/018b5513-a62c-4525-86cf-740aec1f9b7c/project/018cdab5-c55b-4fc3-8b5d-a5853dbc98a1.svg)](https://wakatime.com/badge/user/018b5513-a62c-4525-86cf-740aec1f9b7c/project/018cdab5-c55b-4fc3-8b5d-a5853dbc98a1)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
 
 ## Development server
