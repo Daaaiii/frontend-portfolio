@@ -36,4 +36,11 @@ export const routes: Routes = [
         (m) => m.StatsComponent
       ),
   },
+  {
+    path: 'blog',
+    loadComponent: () =>
+      import('./components/blog/blog.component').then(
+        (m) => m.BlogComponent
+      ),
+  },
 ];
