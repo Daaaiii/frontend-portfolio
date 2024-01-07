@@ -22,7 +22,7 @@
         <h2>Projetos mais recentes</h2>
       </div>
     </div>
-    <div class="container-projetos">
+    <div *ngIf="projetosRecentes" class="container-projetos">
       <div *ngFor="let projeto of projetosRecentes" class="projeto">
           <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
           <h3>{{ projeto.nome }}</h3>

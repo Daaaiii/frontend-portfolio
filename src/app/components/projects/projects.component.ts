@@ -54,15 +54,14 @@ export class ProjectsComponent {
     this.getProjects();
   }
   username: string = 'Daaaiii';
-  url: string = `https://api.github.com/users/${this.username}/repos?page=5?sort=updated&direction=desc`;
+  url: string = `https://api.github.com/users/${this.username}/repos?sort=updated&direction=desc`;
 
   async getProjects() {
     try {
       const response = await fetch(this.url);
       const data = await response.json();
-      console.log(data);
 
-      this.projetosRecentes = data.slice(0, 5).map((proj: any) => ({
+      this.projetosRecentes = data.slice(0, 3).map((proj: any) => ({
         nome: proj.name,
         imagemUrl: 'assets/github.png',
         descricao: proj.description || 'Sem descrição disponível.',
