@@ -1,9 +1,8 @@
-/* FOOTER */
 .footer {
+  align-self: flex-end;
   margin-top: 7rem;
   text-align: center;
   background-color: var(--cor-fundo-escura);
-
 }
 
 .footer .container {
