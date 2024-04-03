@@ -22,6 +22,7 @@
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.5",
     "@fortawesome/fontawesome-free": "^6.5.1",
+    "body-parser": "^1.20.2",
     "devicon": "^2.15.1",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
