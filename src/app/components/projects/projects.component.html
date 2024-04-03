@@ -1,37 +1,125 @@
 <section class="projetos section" id="projetos">
   <div class="container">
+
     <div class="row">
       <div class="section-title">
-        <h2>Meus projetos</h2>
+        <h2>Backend Javascript/Typescript</h2>
+      </div>
+    </div>
+    <div *ngIf="projetosJS" class="container-projetos">
+      <div *ngFor="let projeto of projetosJS" class="projeto">
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p *ngIf="projeto.descricao">{{ projeto.descricao }}</p>
+          <p *ngIf="projeto.topics">{{ projeto.topics }}</p>
+          <p *ngIf="projeto.urlProjeto">
+            🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a>
+          </p>
+          <p *ngIf="projeto.urlCodigo">
+            🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="section-title">
+        <h2>Backend C#</h2>
+      </div>
+    </div>
+    <div *ngIf="projetosCSharp" class="container-projetos">
+      <div *ngFor="let projeto of projetosCSharp" class="projeto">
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p *ngIf="projeto.descricao">{{ projeto.descricao }}</p>
+          <p *ngIf="projeto.topics">{{ projeto.topics }}</p>
+          <p *ngIf="projeto.urlProjeto">
+            🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a>
+          </p>
+          <p *ngIf="projeto.urlCodigo">
+            🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a>
+          </p>
+        </div>
+      </div>
+    </div>    
+
+    
+    <div class="row">
+      <div class="section-title">
+        <h2> FRONTEND REACT</h2>
       </div>
     </div>
     <div class="container-projetos">
-      <div *ngFor="let projeto of projetos" class="projeto">
-          <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
-          <h3>{{ projeto.nome }}</h3>
-          <div class="informacoes-projeto">
-            <p>{{ projeto.descricao }}</p>
-            <p>{{ projeto.topics }}</p>
-            <p>🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
-            <p>🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
-          </div>
+      <div *ngFor="let projeto of projetosReact" class="projeto">
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p>{{ projeto.descricao }}</p>
+          <p>{{ projeto.topics }}</p>
+          <p>🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
+          <p>🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
+        </div>
       </div>
     </div>
+
     <div class="row">
       <div class="section-title">
-        <h2>Projetos mais recentes</h2>
+        <h2> FRONTEND ANGULAR</h2>
+      </div>
+    </div>
+    <div class="container-projetos">
+      <div *ngFor="let projeto of projetosAngular" class="projeto">
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p>{{ projeto.descricao }}</p>
+          <p>{{ projeto.topics }}</p>
+          <p>🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
+          <p>🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="section-title">
+        <h2>Outros projetos</h2>
+      </div>
+    </div>
+    <div class="container-projetos">
+      <div *ngFor="let projeto of projetosIniciais" class="projeto">
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p>{{ projeto.descricao }}</p>
+          <p>{{ projeto.topics }}</p>
+          <p>🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
+          <p>🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="section-title">
+        <h2>ultimos projetos que trabalhei</h2>
       </div>
     </div>
     <div *ngIf="projetosRecentes" class="container-projetos">
       <div *ngFor="let projeto of projetosRecentes" class="projeto">
-          <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
-          <h3>{{ projeto.nome }}</h3>
-          <div class="informacoes-projeto">
-            <p *ngIf="projeto.descricao">{{ projeto.descricao }}</p>
-            <p *ngIf="projeto.topics">{{ projeto.topics }}</p>
-            <p *ngIf="projeto.urlProjeto">🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a></p>
-            <p *ngIf="projeto.urlCodigo">🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a></p>
-          </div>
+        <img [src]="projeto.imagemUrl" [alt]="projeto.nome" />
+        <h3>{{ projeto.nome }}</h3>
+        <div class="informacoes-projeto">
+          <p *ngIf="projeto.descricao">{{ projeto.descricao }}</p>
+          <p *ngIf="projeto.topics">{{ projeto.topics }}</p>
+          <p *ngIf="projeto.urlProjeto">
+            🔗 <a [href]="projeto.urlProjeto" target="_blank">Deploy</a>
+          </p>
+          <p *ngIf="projeto.urlCodigo">
+            🔗 <a [href]="projeto.urlCodigo" target="_blank">Código</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
